@@ -26,13 +26,13 @@
                             <% for(const accountId in connectedAccounts) {%>
                                 <div class="account-profile">
                                     <span class="account-email"><%= connectedAccounts[accountId].email_address  %></span>
-                                    <button type="button" class="del-button" onclick="deleteAccount(<%= JSON.stringify(accountId) %>)">-</button>
+                                    <!--<button type="button" class="del-button" onclick="deleteAccount(<%= JSON.stringify(accountId) %>)">-</button>-->
                                 </div>
                             <% } %>
                         <% } %>
                     </div>
                 </div>
-                <button type="button" class="button" onclick="connectAccount()">Connect account</button>
+                <!--<button type="button" class="button" onclick="connectAccount()">Connect account</button>-->
             </div>
 
             <hr />

@@ -72,9 +72,8 @@ app.get('/getAuthUrl', async (req, res) => {
     const options = {
         redirectURI: ORIGIN,
         response_type: 'token',
-        scopes: ['calendar'],
     };
-    console.log('options', options);
+
     try {
         // Redirect your user to the auth_url
         response.authUrl  = Nylas.urlForAuthentication(options);
@@ -147,7 +146,5 @@ app.get("/", async (req, res) => {
 
 app.listen(PORT);
 console.log(`serving on ${ORIGIN}`);
-// removeAccounts();
-console.log(getAccounts());
 
 

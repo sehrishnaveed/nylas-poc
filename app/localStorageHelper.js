@@ -20,7 +20,16 @@ function setAccounts(account) {
 }
 
 function getAccounts() {
-    return JSON.parse(localStorage.getItem('accounts'));
+    return {
+        '3883pn6bg4w8byk4l5t1xpboc': {
+            access_token: 'VugigEnFvxuzmpF5Ugpo8w8MPtq7q0',
+            account_id: '3883pn6bg4w8byk4l5t1xpboc',
+            email_address: 'dev@umwella.com',
+            provider: 'gmail',
+            token_type: 'bearer'
+        },
+    };
+    // return JSON.parse(localStorage.getItem('accounts'));
 }
 
 function removeAccounts() {
