@@ -71,7 +71,7 @@ app.get('/getAuthUrl', async (req, res) => {
 
     const options = {
         redirectURI: ORIGIN,
-        response_type: 'token',
+        response_type: 'code',
     };
 
     try {
@@ -121,7 +121,6 @@ app.get("/", async (req, res) => {
     try {
         // Extract the "code" from the page's query string:
         const codeFromQuery = req.query.code;
-        const accountId = req.query.accountId;
         let reRender = false;
 
         if (codeFromQuery) {
@@ -130,7 +129,6 @@ app.get("/", async (req, res) => {
         }
 
         const accounts = getAccounts();
-        const totalAccount = accounts ? Object.keys(accounts) : 0;
 
         const passedParams = {
             connectedAccounts: accounts,
@@ -146,5 +144,6 @@ app.get("/", async (req, res) => {
 
 app.listen(PORT);
 console.log(`serving on ${ORIGIN}`);
+console.log(getAccounts());
 
 
